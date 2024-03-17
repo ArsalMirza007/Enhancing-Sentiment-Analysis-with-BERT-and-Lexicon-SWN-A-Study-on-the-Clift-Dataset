@@ -81,7 +81,48 @@ Here are the tasks performed in the provided code along with their descriptions,
 # Lexicon SWN Results:
 
 # Instructions:
+This code performs several tasks:
 
+1. **Installation of Required Packages**: The code installs necessary packages using pip, including TensorFlow, pandas, openpyxl, nltk, textblob, and spacy.
+
+2. **Data Preprocessing**:
+   - Loading the dataset from an Excel file (`Clift Data.xlsx`).
+   - Initializing NLTK components such as stopwords and WordNet lemmatizer.
+   - Initializing TextBlob for sentiment analysis.
+   - Downloading NLTK resources like tokenizers and wordnet.
+   - Lowercasing the text in the 'message' column.
+   - Removing special characters from the text.
+   - Removing stopwords from the text.
+   - Preprocessing each message:
+     - Tokenization of words.
+     - Lemmatization of words.
+     - Part-of-speech (POS) tagging using SpaCy.
+     - Sentiment analysis using TextBlob.
+
+3. **Sentiment Analysis with SentiWordNet**:
+   - Calculating sentiment scores for each sentence using SentiWordNet.
+   - Defining sentiment classes based on sentiment scores.
+   - Applying the sentiment class categorization function to sentiment scores.
+
+4. **Model Building and Training**:
+   - Splitting the data into training and testing sets.
+   - Building a neural network model using TensorFlow's Keras API.
+   - Compiling the model with Adam optimizer and categorical cross-entropy loss.
+   - Training the model on the training data.
+   - Evaluating the model's performance on the test data.
+   - Printing test loss and accuracy.
+
+5. **Model Evaluation**:
+   - Predicting probabilities for each class.
+   - Converting probabilities to class labels.
+   - Creating a confusion matrix.
+   - Plotting the confusion matrix using seaborn.
+   - Creating a classification report.
+
+6. **Visualization**:
+   - Creating a pie chart to show the distribution of sentiment labels.
+   - Creating a combined bar graph to show evaluation metrics (Precision, Recall, F1 Measure) for each sentiment class.
+   - Creating a combined line graph to show evaluation metrics (Precision, Recall, F1 Measure) for each sentiment class.
 # Screenshots:
 ![epochs](https://github.com/ArsalMirza007/Enhancing-Sentiment-Analysis-with-BERT-and-Lexicon-SWN-A-Study-on-the-Clift-Dataset/assets/121928372/989a5ac0-e2ee-461b-a767-5e3cc5c8526a)
 ![accuracy](https://github.com/ArsalMirza007/Enhancing-Sentiment-Analysis-with-BERT-and-Lexicon-SWN-A-Study-on-the-Clift-Dataset/assets/121928372/d4739d1b-f71c-41a2-8252-4b2fa760064b)
